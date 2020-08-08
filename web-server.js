@@ -22,8 +22,6 @@ mongoose.connect(
 // Middleware
 app.use(express.json());
 
-
-
 // Route middleware
 
 app.use('/api/user', authRoute);
