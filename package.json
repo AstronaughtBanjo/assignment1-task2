@@ -8,11 +8,11 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon web-server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AstronaughtBanjo/sit725-prac2.git"
+    "url": "git+https://github.com/AstronaughtBanjo/eBay-v2.0.git"
   },
   "author": "",
   "license": "ISC",
