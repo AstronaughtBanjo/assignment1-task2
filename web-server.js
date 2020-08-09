@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 // Import routes
 
 const authRoute = require('./routes/auth');
-const addProductRoute = require('./routes/addProduct');
+const productsRoute = require('./routes/products');
 
 dotenv.config();
 
@@ -26,6 +26,6 @@ app.use(express.json());
 // Route middleware
 
 app.use('/api/user', authRoute);
-app.use('/api/addproduct', addProductRoute);
+app.use('/api/products', productsRoute);
 
 app.listen((port), () => console.log('Server up and running'));
