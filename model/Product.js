@@ -6,6 +6,10 @@ const productSchema = new mongoose.Schema({
         required: true,
         min: 6
     },
+    price: {
+        type: String,
+        required: true,
+    },
     date: {
         type: Date,
         default: Date.now

@@ -35,6 +35,8 @@ const productValidation = (data) => {
     const schema = Joi.object({
         name: Joi.string()
         .min(6)
+        .required(),
+        price: Joi.string()
         .required()
     });
     return schema.validate(data)

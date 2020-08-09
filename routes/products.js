@@ -3,8 +3,8 @@ const verify = require('./verifyToken');
 const User = require('../model/User');
 const user = User;
 const Product = require('../model/Product');
-const {productValidation} = require('../validation')
 const product = Product;
+const {productValidation} = require('../validation')
 
 // Get id of user from token
 
@@ -21,7 +21,7 @@ router.get('/:id', async (req, res, next) => {
             _id: id,
         });
         if (!item) return next();
-        return res.json(item);
+        return res.json(item.price);
     } catch (error) {
         next(error);
     }
@@ -44,6 +44,7 @@ router.post('/add', async (req, res, next) => {
 
     const product = new Product({
         name: req.body.name,
+        price: req.body.price,
     });
     try{
         const savedProduct = await product.save();

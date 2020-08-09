@@ -4,11 +4,13 @@ const dotenv = require('dotenv');
 const port = 3000;
 const mongoose = require('mongoose');
 
+app.use(express.static(__dirname + '/public'))
 
 // Import routes
 
 const authRoute = require('./routes/auth');
 const productsRoute = require('./routes/products');
+const calculatorRoute = require('./routes/calculator');
 
 dotenv.config();
 
@@ -27,5 +29,6 @@ app.use(express.json());
 
 app.use('/api/user', authRoute);
 app.use('/api/products', productsRoute);
+app.use('/adder', calculatorRoute);
 
 app.listen((port), () => console.log('Server up and running'));
